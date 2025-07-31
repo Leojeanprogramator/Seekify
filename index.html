@@ -3,51 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seekify - Ferramentas online</title>
+    <title>Seekfy - Ferramentas online</title>
     <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!-- Menu Superior Direito -->
+    <!-- Menu Superior Central -->
     <nav class="top-menu">
         <div class="menu-container">
-            <button class="menu-btn">
+            <button class="menu-btn" id="homeBtn">
                 <i class="fas fa-home"></i>
                 <span>Home</span>
             </button>
-            <button class="menu-btn">
-                <i class="fab fa-discord"></i>
+            <button class="menu-btn" id="toolsBtn">
+                <i class="fas fa-tools"></i>
                 <span>Ferramentas</span>
             </button>
-            <button class="menu-btn">
-                <i class="fas fa-lightbulb"></i>
+            <button class="menu-btn" id="faqBtn">
+                <i class="fas fa-question-circle"></i>
                 <span>FAQ</span>
             </button>
         </div>
     </nav>
 
     <!-- Badge Superior Esquerdo -->
-    <div class="top-badge">
-        <div class="badge-content">
-            <i class="fas fa-trophy"></i>
-            <span class="badge-text">Seekify</span>
-            <span class="beta-badge">Beta</span>
+        <div class="top-badge">
+            <div class="badge-content">
+                <i class="fas fa-feather-alt"></i>
+                <span class="badge-text">Seekify</span>
+                <span class="beta-badge">Beta</span>
+            </div>
         </div>
-    </div>
+
 
     <!-- Seção Principal -->
     <main class="hero-section">
         <div class="container">
             <h1 class="main-title">
                 Descubra as melhores<br>
-                <span class="highlight">ferramentas online</span><br>
-                para facilitar seu dia a dia<br>
-                <span class="future-room">&lt; Ferramentas úteis, grátis e online /&gt;</span>
+                <span class="highlight">Ferramentas online</span><br>
+                para facilitar o seu dia a dia!<br>
+                <span class="future-room">&lt; Rapido, facil, Gratis /&gt;</span>
             </h1>
             
             <p class="subtitle">
-               Uma coleção de ferramentas inteligentes para facilitar seu dia a dia online.
+                Ferramentas práticas e inteligentes para o seu dia a dia, tudo em um só lugar.
             </p>
         </div>
     </main>
@@ -57,60 +58,24 @@
         <div class="container">
             <h2 class="tools-title">Ferramentas Online</h2>
             
+            <!-- Barra de Pesquisa -->
+            <div class="search-container">
+                <div class="search-box">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="text" id="searchInput" placeholder="Pesquisar ferramentas..." class="search-input">
+                    <button class="clear-search" id="clearSearch" style="display: none;">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mensagem de resultado da pesquisa -->
+            <div class="search-results" id="searchResults" style="display: none;">
+                <p class="results-text" id="resultsText"></p>
+            </div>
+            
             <div class="tools-grid">
-                <div class="tool-card" data-tool="compressor">
-                    <h3 class="card-title">Compressor de Imagem</h3>
-                    <p class="card-description">Reduza o tamanho de imagens PNG, JPG e outros formatos sem perder qualidade.</p>
-                    <div class="card-footer">
-                        <span class="tool-link">🔗 Visitar ferramenta</span>
-                        <span class="tool-category">📁 Utilitários</span>
-                    </div>
-                </div>
-                
-                <div class="tool-card" data-tool="plagio">
-                    <h3 class="card-title">Verificador de Plágio</h3>
-                    <p class="card-description">Verifique se seu texto tem conteúdo duplicado ou plagiado.</p>
-                    <div class="card-footer">
-                        <span class="tool-link">🔗 Visitar ferramenta</span>
-                        <span class="tool-category">📝 Texto</span>
-                    </div>
-                </div>
-                
-                <div class="tool-card" data-tool="pdf">
-                    <h3 class="card-title">Editor de PDF Online</h3>
-                    <p class="card-description">Edite documentos PDF diretamente no navegador sem instalar programas.</p>
-                    <div class="card-footer">
-                        <span class="tool-link">🔗 Visitar ferramenta</span>
-                        <span class="tool-category">📄 Documentos</span>
-                    </div>
-                </div>
-                
-                <div class="tool-card" data-tool="qr">
-                    <h3 class="card-title">Gerador de QR Code</h3>
-                    <p class="card-description">Crie códigos QR personalizados para links, textos e informações.</p>
-                    <div class="card-footer">
-                        <span class="tool-link">🔗 Visitar ferramenta</span>
-                        <span class="tool-category">🔗 Links</span>
-                    </div>
-                </div>
-                
-                <div class="tool-card" data-tool="timer">
-                    <h3 class="card-title">Temporizador Online</h3>
-                    <p class="card-description">Cronômetro e alarme online para gerenciar seu tempo de estudo.</p>
-                    <div class="card-footer">
-                        <span class="tool-link">🔗 Visitar ferramenta</span>
-                        <span class="tool-category">⏰ Produtividade</span>
-                    </div>
-                </div>
-                
-                <div class="tool-card" data-tool="logo">
-                    <h3 class="card-title">Criador de Logos</h3>
-                    <p class="card-description">Design logos profissionais gratuitamente com ferramentas online.</p>
-                    <div class="card-footer">
-                        <span class="tool-link">🔗 Visitar ferramenta</span>
-                        <span class="tool-category">🎨 Design</span>
-                    </div>
-                </div>
+                <!-- As ferramentas serão carregadas dinamicamente pelo JavaScript -->
             </div>
         </div>
     </section>
@@ -131,8 +96,103 @@
                 <p id="modalDescription">Descrição da ferramenta.</p>
                 
                 <div class="script-url-section">
-                    <label for="scriptUrl">URL do Script</label>
-                    <input type="text" id="scriptUrl" value="https://exemplo.com/script" readonly>
+                    <label for="scriptUrl">URL da Ferramenta</label>
+                    <div class="url-container">
+                        <input type="text" id="scriptUrl" value="https://exemplo.com/script" readonly>
+                        <button class="visit-tool-btn" id="visitToolBtn">
+                            <i class="fas fa-external-link-alt"></i>
+                            Visitar Ferramenta
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal FAQ -->
+    <div class="modal-overlay" id="faqModalOverlay">
+        <div class="modal-content faq-modal">
+            <div class="modal-header">
+                <div class="tool-badge">
+                    <i class="fas fa-question-circle"></i>
+                    <span>PERGUNTAS FREQUENTES</span>
+                </div>
+                <button class="close-modal" id="closeFaqModal">×</button>
+            </div>
+            
+            <div class="modal-body">
+                <div class="faq-intro">
+                    <h2>Como Funciona o Seekify?</h2>
+                    <p>Somos um <strong>agregador de ferramentas</strong> que conecta você às melhores soluções online. Não somos proprietários das ferramentas - apenas facilitamos sua descoberta e acesso.</p>
+                </div>
+                
+                <div class="faq-section">
+                    <h3>📋 Sobre as Ferramentas</h3>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Quem são os proprietários das ferramentas?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Cada ferramenta é propriedade de sua respectiva empresa desenvolvedora. Nós apenas fornecemos links diretos para essas ferramentas oficiais.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>As ferramentas são gratuitas?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>A maioria das ferramentas oferece versões gratuitas, mas algumas podem ter recursos premium pagos. Sempre verificamos os termos de uso de cada ferramenta.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Como vocês selecionam as ferramentas?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Selecionamos ferramentas baseadas em qualidade, confiabilidade e utilidade para estudantes e profissionais. Todas são testadas e verificadas.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-section">
+                    <h3>🔗 Como Usar</h3>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Como acessar uma ferramenta?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Clique em qualquer card de ferramenta para ver detalhes e obter o link direto. Você será redirecionado para o site oficial da ferramenta.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Posso sugerir novas ferramentas?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Sim! Estamos sempre abertos a sugestões. Entre em contato conosco para recomendar ferramentas que você considera úteis.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-section">
+                    <h3>⚠️ Aviso Importante</h3>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Qual é o papel do Seekify</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Somos um <strong>agregador e facilitador</strong>. Não criamos, desenvolvemos ou possuímos as ferramentas listadas. Nosso objetivo é conectar você às melhores soluções disponíveis online.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
