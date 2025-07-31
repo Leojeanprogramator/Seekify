@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seekify - Ferramentas online</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Menu Superior Direito -->
+    <nav class="top-menu">
+        <div class="menu-container">
+            <button class="menu-btn">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </button>
+            <button class="menu-btn">
+                <i class="fab fa-discord"></i>
+                <span>Ferramentas</span>
+            </button>
+            <button class="menu-btn">
+                <i class="fas fa-lightbulb"></i>
+                <span>FAQ</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Badge Superior Esquerdo -->
+    <div class="top-badge">
+        <div class="badge-content">
+            <i class="fas fa-trophy"></i>
+            <span class="badge-text">Seekify</span>
+            <span class="beta-badge">Beta</span>
+        </div>
+    </div>
+
+    <!-- Seção Principal -->
+    <main class="hero-section">
+        <div class="container">
+            <h1 class="main-title">
+                Descubra os melhores<br>
+                <span class="highlight">scripts</span><br>
+                para as plataformas do<br>
+                <span class="future-room">&lt; Sala do Futuro /&gt;</span>
+            </h1>
+            
+            <p class="subtitle">
+                Uma coleção de ferramentas especializadas para otimizar sua experiência na Sala do Futuro
+            </p>
+        </div>
+    </main>
+
+    <!-- Seção Ferramentas Online -->
+    <section class="tools-section">
+        <div class="container">
+            <h2 class="tools-title">Ferramentas Online</h2>
+            
+            <div class="tools-grid">
+                <div class="tool-card" data-tool="compressor">
+                    <h3 class="card-title">Compressor de Imagem</h3>
+                    <p class="card-description">Reduza o tamanho de imagens PNG, JPG e outros formatos sem perder qualidade.</p>
+                    <div class="card-footer">
+                        <span class="tool-link">🔗 Visitar ferramenta</span>
+                        <span class="tool-category">📁 Utilitários</span>
+                    </div>
+                </div>
+                
+                <div class="tool-card" data-tool="plagio">
+                    <h3 class="card-title">Verificador de Plágio</h3>
+                    <p class="card-description">Verifique se seu texto tem conteúdo duplicado ou plagiado.</p>
+                    <div class="card-footer">
+                        <span class="tool-link">🔗 Visitar ferramenta</span>
+                        <span class="tool-category">📝 Texto</span>
+                    </div>
+                </div>
+                
+                <div class="tool-card" data-tool="pdf">
+                    <h3 class="card-title">Editor de PDF Online</h3>
+                    <p class="card-description">Edite documentos PDF diretamente no navegador sem instalar programas.</p>
+                    <div class="card-footer">
+                        <span class="tool-link">🔗 Visitar ferramenta</span>
+                        <span class="tool-category">📄 Documentos</span>
+                    </div>
+                </div>
+                
+                <div class="tool-card" data-tool="qr">
+                    <h3 class="card-title">Gerador de QR Code</h3>
+                    <p class="card-description">Crie códigos QR personalizados para links, textos e informações.</p>
+                    <div class="card-footer">
+                        <span class="tool-link">🔗 Visitar ferramenta</span>
+                        <span class="tool-category">🔗 Links</span>
+                    </div>
+                </div>
+                
+                <div class="tool-card" data-tool="timer">
+                    <h3 class="card-title">Temporizador Online</h3>
+                    <p class="card-description">Cronômetro e alarme online para gerenciar seu tempo de estudo.</p>
+                    <div class="card-footer">
+                        <span class="tool-link">🔗 Visitar ferramenta</span>
+                        <span class="tool-category">⏰ Produtividade</span>
+                    </div>
+                </div>
+                
+                <div class="tool-card" data-tool="logo">
+                    <h3 class="card-title">Criador de Logos</h3>
+                    <p class="card-description">Design logos profissionais gratuitamente com ferramentas online.</p>
+                    <div class="card-footer">
+                        <span class="tool-link">🔗 Visitar ferramenta</span>
+                        <span class="tool-category">🎨 Design</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modais das Ferramentas -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="tool-badge">
+                    <i class="fas fa-trophy"></i>
+                    <span id="modalToolName">FERRAMENTA</span>
+                </div>
+                <button class="close-modal" id="closeModal">×</button>
+            </div>
+            
+            <div class="modal-body">
+                <h2 id="modalTitle">Título da Ferramenta</h2>
+                <p id="modalDescription">Descrição da ferramenta.</p>
+                
+                <div class="script-url-section">
+                    <label for="scriptUrl">URL do Script</label>
+                    <input type="text" id="scriptUrl" value="https://exemplo.com/script" readonly>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html> 
